@@ -10,10 +10,10 @@ This image is designed for use within a Compose file. To use it, you should:
 
 1. Create a service in your docker-compose.yml file using this image (joshwalsh/nginx-for-php-fpm)
 2. Create a service in your docker-compose.yml file which runs your PHP application with PHP-FPM
-    a. The PHP-FPM image can contain the application code anywhere in its filesystem (`/var/www/html` is commonly used)
-    b. The php-fpm.conf file should contain a `chdir` directive which points to the directory that you want served by nginx (e.g. for a Laravel app, you might wish to serve `/var/www/html/public/`)
-    c. The PHP-FPM service should either be named `php-fpm`, or should be aliased as `php-fpm` on a network that the nginx service has access to
-    d. The PHP-FPM service should listen on port 9000
+    1. The PHP-FPM image can contain the application code anywhere in its filesystem (`/var/www/html` is commonly used)
+    2. The php-fpm.conf file should contain a `chdir` directive which points to the directory that you want served by nginx (e.g. for a Laravel app, you might wish to serve `/var/www/html/public/`)
+    3. The PHP-FPM service should either be named `php-fpm`, or should be aliased as `php-fpm` on a network that the nginx service has access to
+    4. The PHP-FPM service should listen on port 9000
 3. Create a [named volume](https://docs.docker.com/compose/compose-file/#volume-configuration-reference) to store the content that you want nginx to serve
 4. Add this volume to the php-fpm service so it maps to the location from step 2b
 5. Add this volume to the nginx service so it maps to `/var/www/html`
