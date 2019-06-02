@@ -1,5 +1,7 @@
 # nginx-for-php-fpm
 
+[![](https://img.shields.io/docker/cloud/build/joshuawalsh/nginx-for-php-fpm.svg)](https://hub.docker.com/r/joshuawalsh/nginx-for-php-fpm)
+
 This Docker image allows for serving php-fpm apps with nginx. It uses Alpine Linux, so it's lean and mean. Designed to be easily used within Docker Swarm.
 
 ## Usage instructions
