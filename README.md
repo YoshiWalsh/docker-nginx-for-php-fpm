@@ -1,6 +1,6 @@
 # nginx-for-php-fpm
 
-[![](https://img.shields.io/docker/cloud/build/joshuawalsh/nginx-for-php-fpm.svg)](https://hub.docker.com/r/joshuawalsh/nginx-for-php-fpm)
+[![](https://img.shields.io/docker/cloud/build/yoshiwalsh/nginx-for-php-fpm.svg)](https://hub.docker.com/r/yoshiwalsh/nginx-for-php-fpm)
 
 This Docker image allows for serving php-fpm apps with nginx. It uses Alpine Linux, so it's lean and mean. Designed to be easily used within Docker Swarm.
 
@@ -8,7 +8,7 @@ This Docker image allows for serving php-fpm apps with nginx. It uses Alpine Lin
 
 This image is designed for use within a Compose file. To use it, you should:
 
-1. Create a service in your docker-compose.yml file using this image (joshwalsh/nginx-for-php-fpm)
+1. Create a service in your docker-compose.yml file using this image (yoshiwalsh/nginx-for-php-fpm)
 2. Create a service in your docker-compose.yml file which runs your PHP application with PHP-FPM
     1. The PHP-FPM image can contain the application code anywhere in its filesystem (`/var/www/html` is commonly used)
     2. The php-fpm.conf file should contain a `chdir` directive which points to the directory that you want served by nginx (e.g. for a Laravel app, you might wish to serve `/var/www/html/public/`)
